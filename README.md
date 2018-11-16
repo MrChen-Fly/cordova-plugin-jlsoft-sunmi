@@ -2,6 +2,6 @@
 cordova 商米打印
 
 使用方法：
-cordova.pluins.SunmiCordova.print()
+cordova.plugins.SunmiCordova.print()
 
 具体见SummiPlugin
