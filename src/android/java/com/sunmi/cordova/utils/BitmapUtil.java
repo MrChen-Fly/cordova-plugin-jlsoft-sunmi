@@ -67,7 +67,7 @@ public class BitmapUtil {
                 break;
         }
         MultiFormatWriter qrCodeWriter = new MultiFormatWriter();
-        Map<EncodeHintType, Object> hints = new HashMap<>();
+        Map<EncodeHintType, Object> hints = new HashMap<EncodeHintType, Object>();
         hints.put(EncodeHintType.CHARACTER_SET, "GBK");
         hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
         try {

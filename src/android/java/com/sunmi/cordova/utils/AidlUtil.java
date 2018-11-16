@@ -140,7 +140,7 @@ public class AidlUtil {
             return null;
         }
 
-        List<String> info = new ArrayList<>();
+        List<String> info = new ArrayList<String>();
         try {
             woyouService.getPrintedLength(generateCB(printerCallback1));
             woyouService.getPrinterFactory(generateCB(printerCallback2));
