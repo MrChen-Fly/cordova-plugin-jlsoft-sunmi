@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-jlsoft-sunmi" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SunmiCordova</name>
+    <js-module name="SunmiCordova" src="www/sunmiCordova.js">
+        <clobbers target="cordova.plugins.SunmiCordova" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SunmiPlugin">
+                <param name="android-package" value="com.sunmi.cordova.SunmiPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/aidl/com/sunmi/cordova/trans/TransBean.aidl" target-dir="aidl/com/sunmi/cordova/trans"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="aidl/woyou/aidlservice/jiuiv5"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ITax.aidl" target-dir="aidl/woyou/aidlservice/jiuiv5"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="aidl/woyou/aidlservice/jiuiv5"/>
+
+        <source-file src="src/android/java/com/sunmi/cordova/bean/TableItem.java" target-dir="src/com/sunmi/cordova/bean"/>
+        <source-file src="src/android/java/com/sunmi/cordova/trans/TransBean.java" target-dir="src/com/sunmi/cordova/trans"/>
+        <source-file src="src/android/java/com/sunmi/cordova/utils/AidlUtil.java" target-dir="src/com/sunmi/cordova/utils"/>
+        <source-file src="src/android/java/com/sunmi/cordova/utils/BitmapUtil.java" target-dir="src/com/sunmi/cordova/utils"/>
+        <source-file src="src/android/java/com/sunmi/cordova/utils/BytesUtil.java" target-dir="src/com/sunmi/cordova/utils"/>
+        <source-file src="src/android/java/com/sunmi/cordova/utils/ESCUtil.java" target-dir="src/com/sunmi/cordova/utils"/>
+        <source-file src="src/android/java/com/sunmi/cordova/utils/PrinterCallback.java" target-dir="src/com/sunmi/cordova/utils"/>
+        <source-file src="src/android/java/com/sunmi/cordova/utils/Json.java" target-dir="src/com/sunmi/cordova/utils"/>
+
+        <source-file src="src/android/java/com/sunmi/cordova/SunmiPlugin.java" target-dir="src/com/sunmi/cordova"/>
+
+        <lib-file src="src/android/lib/core-3.3.0.jar" />
+        <lib-file src="src/android/lib/fastjson-1.2.29.jar" />
+
+    </platform>
+</plugin>

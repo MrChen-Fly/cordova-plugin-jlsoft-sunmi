@@ -1,0 +1,8 @@
+{
+  "author": {
+    "name": "chencheng"
+  },
+  "description": "Cordova plugin to return the version number of the current app",
+  "name": "cordova-plugin-jlsoft-sunmi",
+  "version": "0.0.1"
+}
