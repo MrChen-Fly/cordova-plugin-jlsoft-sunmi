@@ -14,10 +14,10 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/aidl/com/sunmi/cordova/trans/TransBean.aidl" target-dir="aidl/com/sunmi/cordova/trans"/>
-        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="aidl/woyou/aidlservice/jiuiv5"/>
-        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ITax.aidl" target-dir="aidl/woyou/aidlservice/jiuiv5"/>
-        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="aidl/woyou/aidlservice/jiuiv5"/>
+        <source-file src="src/android/aidl/com/sunmi/cordova/trans/TransBean.aidl" target-dir="src/com/sunmi/cordova/trans"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="src/woyou/aidlservice/jiuiv5"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ITax.aidl" target-dir="src/woyou/aidlservice/jiuiv5"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="src/woyou/aidlservice/jiuiv5"/>
 
         <source-file src="src/android/java/com/sunmi/cordova/bean/TableItem.java" target-dir="src/com/sunmi/cordova/bean"/>
         <source-file src="src/android/java/com/sunmi/cordova/trans/TransBean.java" target-dir="src/com/sunmi/cordova/trans"/>
