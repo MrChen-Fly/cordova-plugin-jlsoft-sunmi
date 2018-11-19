@@ -6,8 +6,13 @@
     <js-module name="SunmiCordova" src="www/sunmiCordova.js">
         <clobbers target="cordova.plugins.SunmiCordova" />
     </js-module>
+    
+    <dependency id="phonegap-plugin-barcodescanner" />
 
     <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SunmiPlugin">
                 <param name="android-package" value="com.sunmi.cordova.SunmiPlugin"/>
@@ -30,8 +35,7 @@
 
         <source-file src="src/android/java/com/sunmi/cordova/SunmiPlugin.java" target-dir="src/com/sunmi/cordova"/>
 
-        <lib-file src="src/android/lib/core-3.3.0.jar" />
-        <lib-file src="src/android/lib/fastjson-1.2.29.jar" />
+        <framework src="src/android/sunmicordova.gradle" custom="true" type="gradleReference"/>
 
     </platform>
 </plugin>
