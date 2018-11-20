@@ -31,8 +31,8 @@ public class SunmiPlugin extends CordovaPlugin {
             JSONObject jo = Json.toJO(o);
 
             if (jo.isEmpty()) {
-                callbackContext.error("text is empty.");
-                return true;
+                callbackContext.error("content is empty.");
+                continue;
             }
             String text = jo.getString("text");
             int size = jo.getIntValue("size");
@@ -43,8 +43,8 @@ public class SunmiPlugin extends CordovaPlugin {
             int width = jo.getIntValue("width");
 
             if (text == null) {
-                callbackContext.error("print data is empty.");
-                return true;
+                callbackContext.error("text is nulls.");
+                continue;
             }
 
             if ("printText".equals(type)) {
@@ -57,7 +57,7 @@ public class SunmiPlugin extends CordovaPlugin {
                 AidlUtil.getInstance().printQr(text, size, 3);
             } else {
                 callbackContext.error("type is empty");
-                return true;
+                continue;
             }
 
         }
